@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="activity_1">Activity 1</string>
+    <string name="activity_2">Activity 2</string>
+    <string name="activity_3">Activity 3</string>
+    <string name="activity_about">Activity About</string>
+    <string name="btn_to_second">to second</string>
+    <string name="btn_to_first">to first</string>
+    <string name="btn_to_third">to third</string>
+    <string name="btn_activity_about">Activity About</string>
+</resources>
