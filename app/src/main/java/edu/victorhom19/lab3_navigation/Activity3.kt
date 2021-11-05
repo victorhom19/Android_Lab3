@@ -17,6 +17,10 @@ class Activity3 : AppCompatActivity() {
             startActivity(Intent(this, Activity1::class.java)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
+        binding.switchToFirstAlt.setOnClickListener {
+            startActivity(Intent(this, Activity1::class.java)
+                .setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+        }
         binding.switchToSecond.setOnClickListener {
             finish()
         }

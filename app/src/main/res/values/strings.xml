@@ -6,6 +6,7 @@
     <string name="activity_about">Activity About</string>
     <string name="btn_to_second">to second</string>
     <string name="btn_to_first">to first</string>
+    <string name="btn_to_first_alt">to first alternative</string>
     <string name="btn_to_third">to third</string>
     <string name="btn_activity_about">Activity About</string>
 </resources>
