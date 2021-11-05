@@ -10,10 +10,6 @@ import edu.victorhom19.lab3_navigation.databinding.Activity2Binding
 
 class Activity2 : AppCompatActivity() {
 
-    companion object {
-        private const val ACTIVITY3_RESULT = 0;
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = Activity2Binding.inflate(layoutInflater)
@@ -22,14 +18,7 @@ class Activity2 : AppCompatActivity() {
             finish()
         }
         binding.switchToThird.setOnClickListener {
-            startActivityForResult(Intent(this, Activity3::class.java), ACTIVITY3_RESULT)
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == 1) {
-            finish()
+            startActivity(Intent(this, Activity3::class.java))
         }
     }
 

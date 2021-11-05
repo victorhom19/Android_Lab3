@@ -14,11 +14,10 @@ class Activity3 : AppCompatActivity() {
         val binding = Activity3Binding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.switchToFirst.setOnClickListener {
-            setResult(1)
-            finish()
+            startActivity(Intent(this, Activity1::class.java)
+                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
         binding.switchToSecond.setOnClickListener {
-            setResult(2)
             finish()
         }
     }

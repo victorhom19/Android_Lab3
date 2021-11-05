@@ -17,6 +17,7 @@ class Activity1 : AppCompatActivity() {
         binding.switchToSecond.setOnClickListener {
             startActivity(Intent(this, Activity2::class.java))
         }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
