@@ -166,6 +166,7 @@ class NavigationTest {
 
                 Espresso.onView(ViewMatchers.withId(R.id.activity_main))
                     .check(ViewAssertions.doesNotExist())
+
             }
         }
     }
