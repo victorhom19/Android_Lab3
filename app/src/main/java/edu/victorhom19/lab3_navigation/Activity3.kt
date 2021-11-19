@@ -13,11 +13,11 @@ class Activity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = Activity3Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.switchToFirst.setOnClickListener {
+        binding.bnToFirst.setOnClickListener {
             setResult(1)
             finish()
         }
-        binding.switchToSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             setResult(2)
             finish()
         }

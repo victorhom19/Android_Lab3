@@ -18,10 +18,10 @@ class Activity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = Activity2Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.switchToFirst.setOnClickListener {
+        binding.bnToFirst.setOnClickListener {
             finish()
         }
-        binding.switchToThird.setOnClickListener {
+        binding.bnToThird.setOnClickListener {
             startActivityForResult(Intent(this, Activity3::class.java), ACTIVITY3_RESULT)
         }
     }
