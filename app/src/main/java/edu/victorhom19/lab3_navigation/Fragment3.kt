@@ -14,10 +14,10 @@ class Fragment3 : Fragment() {
     ): View {
         val binding = Fragment3Binding.inflate(layoutInflater)
         val navController = findNavController()
-        binding.switchToFirst.setOnClickListener {
+        binding.bnToFirst.setOnClickListener {
             navController.navigate(R.id.action_fragment3_to_fragment1)
         }
-        binding.switchToSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             navController.navigate(R.id.action_fragment3_to_fragment2)
         }
         setHasOptionsMenu(true)
