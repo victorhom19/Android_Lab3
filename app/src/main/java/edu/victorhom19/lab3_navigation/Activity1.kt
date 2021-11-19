@@ -14,7 +14,7 @@ class Activity1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = Activity1Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.switchToSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             startActivity(Intent(this, Activity2::class.java))
         }
 
