@@ -20,6 +20,12 @@ class Activity2 : AppCompatActivity() {
         binding.bnToThird.setOnClickListener {
             startActivity(Intent(this, Activity3::class.java))
         }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
