@@ -24,6 +24,7 @@ class Activity2 : AppCompatActivity() {
         binding.bnToThird.setOnClickListener {
             startActivityForResult(Intent(this, Activity3::class.java), ACTIVITY3_RESULT)
         }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -31,6 +32,11 @@ class Activity2 : AppCompatActivity() {
         if (resultCode == 1) {
             finish()
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -48,4 +54,5 @@ class Activity2 : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }

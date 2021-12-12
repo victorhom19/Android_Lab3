@@ -160,5 +160,30 @@ class NavigationTest {
         }
     }
 
+    @Test
+    fun testUpNavigation() {
+        Espresso.onView(ViewMatchers.withId(R.id.bnToSecond))
+            .perform(click())
+        Espresso.onView(ViewMatchers.withId(R.id.bnToThird))
+            .perform(click())
+        openAbout()
 
+        Espresso.onView(ViewMatchers.withId(R.id.activity_about))
+            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers
+            .withContentDescription(R.string.nav_app_bar_navigate_up_description))
+            .perform(click())
+        Espresso.onView(ViewMatchers.withId(R.id.fragment3))
+            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers
+            .withContentDescription(R.string.nav_app_bar_navigate_up_description))
+            .perform(click())
+        Espresso.onView(ViewMatchers.withId(R.id.fragment2))
+            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers
+            .withContentDescription(R.string.nav_app_bar_navigate_up_description))
+            .perform(click())
+        Espresso.onView(ViewMatchers.withId(R.id.fragment1))
+            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+    }
 }

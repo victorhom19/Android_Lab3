@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 import edu.victorhom19.lab3_navigation.databinding.Activity1Binding
 
 class Activity1 : AppCompatActivity() {
@@ -18,6 +21,7 @@ class Activity1 : AppCompatActivity() {
             startActivity(Intent(this, Activity2::class.java))
         }
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater

@@ -21,6 +21,12 @@ class Activity3 : AppCompatActivity() {
             setResult(2)
             finish()
         }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
