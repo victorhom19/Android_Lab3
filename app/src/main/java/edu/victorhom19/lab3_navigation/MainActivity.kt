@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_view) as NavHostFragment
         navController = navHostFragment.navController
-
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         inflater.inflate(R.menu.options, menu)
         return true
     }
+
 
 
 
