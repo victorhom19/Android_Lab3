@@ -7,7 +7,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import edu.victorhom19.lab3_navigation.databinding.Activity3Binding
 
-class Activity3 : AppCompatActivity() {
+class Activity3 : AbstractActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,24 +23,4 @@ class Activity3 : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        finish()
-        return true
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.options, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.about_item -> {
-                startActivity(Intent(this, ActivityAbout::class.java))
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
 }

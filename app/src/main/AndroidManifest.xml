@@ -11,13 +11,12 @@
         android:theme="@style/Theme.Lab3_navigation">
 
         <activity
-            android:name=".Activity3"
-            android:exported="true" />
+            android:name=".Activity3" />
         <activity
-            android:name=".Activity2"
-            android:exported="true" />
+            android:name=".Activity2" />
         <activity
             android:name=".Activity1"
+            android:launchMode="singleTop"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,8 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityAbout"
-            android:exported="true" />
+            android:name=".ActivityAbout" />
     </application>
 
 </manifest>
