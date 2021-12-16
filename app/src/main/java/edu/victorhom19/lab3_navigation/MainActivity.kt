@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.nav_view) as NavHostFragment
         navController = navHostFragment.navController
 
-        appBarConfiguration = AppBarConfiguration(navController.graph, binding.activityMain)
-        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -52,7 +50,4 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
-
-
 }
