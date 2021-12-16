@@ -6,6 +6,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.core.app.launchActivity
 import androidx.test.espresso.Espresso
+import androidx.test.espresso.NoActivityResumedException
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
@@ -74,8 +75,14 @@ class NavigationTest {
             .perform(click())
         Espresso.onView(ViewMatchers.withId(R.id.bnToFirst))
             .perform(click())
-        Espresso.pressBackUnconditionally()
-        assertTrue(activityScenarioRule.scenario.state.isAtLeast(Lifecycle.State.DESTROYED))
+        var appClosed = false
+        try {
+            Espresso.pressBack()
+        } catch ( e: NoActivityResumedException ) {
+            appClosed = true
+        }
+
+        assertTrue(appClosed)
     }
 
 

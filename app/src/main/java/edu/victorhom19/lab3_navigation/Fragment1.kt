@@ -25,16 +25,16 @@ class Fragment1 : Fragment() {
 
 
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.about_item -> {
-                val navController = findNavController()
-                navController.navigate(R.id.action_to_activityAbout)
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            R.id.about_item -> {
+//                val navController = findNavController()
+//                navController.navigate(R.id.action_to_activityAbout)
+//                true
+//            }
+//            else -> super.onOptionsItemSelected(item)
+//        }
+//    }
 
 
 

@@ -21,19 +21,20 @@ class Fragment3 : Fragment() {
             navController.navigate(R.id.action_fragment3_to_fragment2)
         }
         setHasOptionsMenu(true)
+
         return binding.root
     }
 
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.about_item -> {
-                val navController = findNavController()
-                navController.navigate(R.id.action_to_activityAbout)
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            R.id.about_item -> {
+//                val navController = findNavController()
+//                navController.navigate(R.id.action_to_activityAbout)
+//                true
+//            }
+//            else -> super.onOptionsItemSelected(item)
+//        }
+//    }
 
 }
